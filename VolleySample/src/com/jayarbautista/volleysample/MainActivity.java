@@ -7,7 +7,11 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.volley.Request;
@@ -57,6 +61,14 @@ public class MainActivity extends Activity {
             }
         });
         mRequestQueue.add(jr);
+        
+        findViewById(R.id.btnThread).setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ThreadSample.class));
+            }
+        });
     }
 
     private void parseJSON(JSONObject json) {
