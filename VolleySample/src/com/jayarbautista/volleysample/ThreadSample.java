@@ -6,18 +6,26 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 public class ThreadSample extends Activity {
+    
     private ProgressBar bar;
-
-    /** Called when the activity is first created. */
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_thread_layout);
+        
         bar = (ProgressBar) findViewById(R.id.progressBar1);
+        
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                startProgress();
+            }
+        });
     }
 
-    public void startProgress(View view) {
+    public void startProgress() {
         bar.setProgress(0);
         new Thread(new Task()).start();
     }

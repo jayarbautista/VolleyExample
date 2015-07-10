@@ -4,5 +4,8 @@
     <string name="app_name">VolleySample</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <string name="start">Start</string>
+    <string name="showThread">Show Thread Sample</string>
 
 </resources>
